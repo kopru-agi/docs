@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  pr-title:
+    name: PR başlığı (Conventional Commits)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: amannn/action-semantic-pull-request@v5
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            feat
+            fix
+            docs
+            refactor
+            test
+            chore
+            ci
+            style
+            perf
+          requireScope: false
+
+  repo-hygiene:
+    name: Depo hijyeni
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 1 MB üstü dosya yok
+        run: |
+          big=$(git ls-files -z | xargs -0 -I{} find {} -maxdepth 0 -type f -size +1024k)
+          if [ -n "$big" ]; then
+            echo "::error::1 MB üstü dosyalar depoya giremez:"
+            echo "$big"
+            exit 1
+          fi
+      - name: Yasaklı dosya yok (.env, anahtar, cache)
+        run: |
+          bad=$(git ls-files | grep -E '(^|/)\.env($|\.)|\.pem$|\.key$|(^|/)node_modules/|(^|/)__pycache__/|graphify-out/|\.DS_Store$' | grep -v '\.env\.example$' || true)
+          if [ -n "$bad" ]; then
+            echo "::error::Bu dosyalar depoya giremez:"
+            echo "$bad"
+            exit 1
+          fi

@@ -1,0 +1,32 @@
+# Sırlar
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Bağımlılık ve build çıktısı
+node_modules/
+.next/
+dist/
+build/
+out/
+coverage/
+__pycache__/
+*.pyc
+
+# Editör ve işletim sistemi
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# AI araçları ve üretilmiş dosyalar
+graphify-out/
+.claude/
+.cursor/
+.codex/
+.agents/
+.aider*
+*.log
