@@ -30,3 +30,6 @@ graphify-out/
 .agents/
 .aider*
 *.log
+
+# Rapor çıktıları (PDF/DOCX/HTML 1 MB sınırını aşar; GitHub Release ile paylaşılır)
+rapor/cikti/

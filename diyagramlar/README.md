@@ -1,17 +1,28 @@
 # Diyagramlar
 
-Diyagramlar **PlantUML** ile kod olarak yazılır. Böylece değişiklikler PR'da satır satır incelenebilir.
+Diyagramlar **koddan üretilir**. Böylece değişiklikler PR'da satır satır incelenebilir ve tüm diyagramlar aynı görünür.
 
-| Dosya | İçerik | Durum |
-|---|---|---|
-| [`use-case.puml`](use-case.puml) | Use case diyagramı | Taslak v0.1 |
-| `er.puml` | Veritabanı ER diyagramı | Bekliyor |
-| `akis-referans-talebi.puml` | Talep akışı (aktivite diyagramı) | Bekliyor |
+| Dosya | İçerik |
+|---|---|
+| [`svg/uc-0-genel-bakis.svg`](svg/uc-0-genel-bakis.svg) | UC-0 Genel bakış: tüm aktörler ve ana kullanım durumları |
+| [`svg/uc-1-is-arayan.svg`](svg/uc-1-is-arayan.svg) | UC-1 İş arayan ve üye |
+| [`svg/uc-2-referans.svg`](svg/uc-2-referans.svg) | UC-2 Referans |
+| [`svg/uc-3-yonetici-sistem.svg`](svg/uc-3-yonetici-sistem.svg) | UC-3 Yönetici ve sistem |
+| [`svg/zaman-plani.svg`](svg/zaman-plani.svg) | Zaman planı (Gantt) |
+| `er.svg` | Veritabanı ER diyagramı (İP-11, bekliyor) |
 
-## Nasıl görüntülenir?
+Her SVG'nin yanında rapor için `.png` kopyası vardır. Senaryolar: [`analiz/use-case-senaryolari.md`](../analiz/use-case-senaryolari.md).
 
-- **VS Code:** "PlantUML" eklentisi, `Alt+D` ile önizleme.
-- **Web:** dosya içeriğini <https://www.plantuml.com/plantuml> adresine yapıştırın.
-- PR'a önizleme görselini (`.svg`) de ekleyin; kaynak `.puml` her zaman zorunludur.
+## Nasıl değiştirilir?
 
-Mermaid'in use case desteği hâlâ beta olduğu için use case diyagramında PlantUML kullanıyoruz.
+1. Use case diyagramı için `uretici.py` içindeki `DIYAGRAMLAR` tanımını, zaman planı için `zaman_plani.py` içindeki `ISLER` listesini düzenleyin.
+2. Betiği çalıştırın:
+   ```
+   python diyagramlar/uretici.py
+   python diyagramlar/zaman_plani.py
+   ```
+3. PNG kopyasını güncelleyin (Chrome açıksa ayrı bir profil klasörü verin):
+   ```
+   chrome --headless=new --disable-gpu --hide-scrollbars --user-data-dir=<boş klasör> --force-device-scale-factor=2 --screenshot=<png yolu> --window-size=<genişlik>,<yükseklik> file:///<svg yolu>
+   ```
+4. Raporu yeniden üretin: `python rapor/olustur.py`
