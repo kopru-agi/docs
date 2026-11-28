@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>W-03 Referans davet et (mobil)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#fff}
+body{font-family:"Segoe UI",Arial,Helvetica,sans-serif;color:#333;font-size:14px;line-height:1.4}
+.frame{position:relative;background:#fff;border:1px solid #444;overflow:hidden}
+.fm{width:390px;min-height:844px}
+.fd{width:1440px;min-height:900px}
+.wl{font-family:Consolas,"Courier New",monospace;font-size:10px;background:#e4e4e4;border-bottom:1px solid #444;padding:3px 8px;color:#222;letter-spacing:.3px}
+.bar{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #444;background:#f2f2f2}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px}
+.x{border:1px solid #666;background-color:#eee;background-image:linear-gradient(to top right,transparent calc(50% - .6px),#999 calc(50% - .6px),#999 calc(50% + .6px),transparent calc(50% + .6px)),linear-gradient(to bottom right,transparent calc(50% - .6px),#999 calc(50% - .6px),#999 calc(50% + .6px),transparent calc(50% + .6px))}
+.ic{display:inline-block;width:22px;height:22px;flex:none}
+.pad{padding:16px}
+.padb{padding-bottom:72px}
+h1{font-size:22px;line-height:1.25;margin-bottom:8px}
+h2{font-size:17px;margin-bottom:8px}
+h3{font-size:14px;margin-bottom:4px}
+p{margin-bottom:8px}
+.muted{color:#777;font-size:12px}
+.small{font-size:12px}
+.box{border:1px solid #444;padding:12px;margin-bottom:12px;background:#fff}
+.gray{background:#f2f2f2}
+.lbl{font-size:12px;font-weight:600;margin:10px 0 4px}
+.in{border:1px solid #444;min-height:38px;padding:0 10px;display:flex;align-items:center;justify-content:space-between;color:#999;background:#fff;font-size:13px}
+.in.f{color:#333}
+.in.err{border-width:2px}
+.ta{min-height:80px;align-items:flex-start;padding-top:8px}
+.btn{display:block;text-align:center;background:#333;color:#fff;padding:10px;border:1px solid #333;font-weight:600;margin-top:10px;font-size:14px}
+.btn.g{background:#fff;color:#333}
+.btn.dis{background:#c8c8c8;border-color:#aaa;color:#666}
+.btn.sm{display:inline-block;padding:4px 10px;font-size:12px;margin-top:0}
+.row{display:flex;gap:8px;align-items:center}
+.between{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.grow{flex:1}
+.chip{border:1px solid #444;padding:3px 10px;border-radius:14px;font-size:12px;display:inline-block;margin:0 4px 6px 0;background:#fff}
+.chip.on{background:#333;color:#fff}
+.chip.dash{border-style:dashed}
+.cb{display:flex;gap:8px;align-items:flex-start;margin:8px 0;font-size:13px}
+.cb i{flex:none;width:16px;height:16px;border:1px solid #444;margin-top:2px;background:#fff;color:#fff;font-size:11px;line-height:14px;text-align:center;font-style:normal}
+.cb i.on{background:#333}
+.cb.r i{border-radius:50%}
+.note{border:1px dashed #666;background:#fafafa;padding:7px 10px;font-size:11.5px;color:#555;margin:10px 0}
+.note b{color:#333}
+.warn{border:2px solid #333;padding:10px;font-size:12px;background:#f2f2f2;margin:10px 0}
+.prog{height:10px;border:1px solid #444;background:#fff;margin:6px 0}
+.prog span{display:block;height:100%;background:#555}
+.badge{display:inline-block;border:1px solid #333;font-size:11px;padding:0 6px;background:#e6e6e6;white-space:nowrap}
+.st{display:inline-block;font-size:11px;padding:1px 7px;border:1px solid #333;white-space:nowrap;background:#fff}
+.st.k{background:#333;color:#fff}
+.st.d{border-style:dashed;color:#666}
+.st.g{background:#ddd}
+.it{border-bottom:1px solid #ccc;padding:10px 0}
+.it:last-child{border-bottom:0}
+.tabbar{position:absolute;bottom:0;left:0;right:0;display:flex;border-top:1px solid #444;background:#f2f2f2}
+.tabbar div{flex:1;text-align:center;font-size:11px;padding:7px 0 6px;color:#666}
+.tabbar div i{display:block;width:18px;height:18px;margin:0 auto 2px;border:1px solid #777}
+.tabbar div.on{color:#111;font-weight:700}
+.tabbar div.on i{background:#555;border-color:#333}
+.steps{display:flex;gap:0;margin:4px 0 14px}
+.steps div{flex:1;text-align:center;font-size:10.5px;color:#666}
+.steps div b{display:block;width:24px;height:24px;line-height:22px;border:1px solid #444;border-radius:50%;margin:0 auto 3px;background:#fff;color:#333}
+.steps div.done b{background:#999;color:#fff}
+.steps div.cur b{background:#333;color:#fff}
+.steps div.cur{color:#111;font-weight:700}
+.seg{display:flex;border:1px solid #444}
+.seg div{flex:1;text-align:center;padding:7px 0;border-right:1px solid #444;font-size:13px}
+.seg div:last-child{border-right:0}
+.seg div.on{background:#333;color:#fff;font-weight:700}
+.av{width:44px;height:44px;border-radius:50%;flex:none}
+.hr{border-top:1px solid #ccc;margin:12px 0}
+.num{display:inline-block;width:26px;height:26px;border:1px solid #444;border-radius:50%;text-align:center;line-height:24px;font-weight:700;flex:none;background:#fff}
+.tog{display:inline-block;width:38px;height:20px;border:1px solid #444;border-radius:10px;position:relative;background:#555;flex:none}
+.tog:after{content:"";position:absolute;right:2px;top:2px;width:14px;height:14px;border-radius:50%;background:#fff}
+.code{display:flex;gap:6px}
+.code div{width:38px;height:42px;border:1px solid #444;text-align:center;line-height:40px;font-size:18px}
+.drop{border:2px dashed #777;padding:16px;text-align:center;background:#fafafa;font-size:13px}
+.lock{opacity:.45}
+.chain{display:flex;align-items:center;justify-content:space-between;gap:4px;font-size:11px;text-align:center}
+.chain .n{border:1px solid #444;padding:6px 4px;flex:1;background:#fff}
+.chain .n.k{background:#333;color:#fff}
+.chain .n.h{border-style:dashed;color:#666}
+.chain .e{flex:none;width:18px;border-top:1px solid #444;position:relative}
+.msg{border:1px solid #888;padding:6px 9px;font-size:12px;margin:6px 0;max-width:80%;background:#fff}
+.msg.me{margin-left:auto;background:#e6e6e6}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{border:1px solid #999;padding:7px 8px;text-align:left;vertical-align:top}
+th{background:#e6e6e6;font-weight:700}
+tr.sel td{background:#eee;border-top:2px solid #333;border-bottom:2px solid #333}
+.dnav{display:flex;align-items:center;justify-content:space-between;padding:14px 48px;border-bottom:1px solid #444;background:#f2f2f2}
+.dnav .links span{margin-left:28px;font-size:14px}
+.col{display:flex;gap:24px;align-items:flex-start}
+.side{width:220px;flex:none;border-right:1px solid #444;background:#f2f2f2;align-self:stretch}
+.side div{padding:10px 18px;border-bottom:1px solid #ccc;font-size:13px}
+.side div.on{background:#333;color:#fff;font-weight:700}
+.kpi{border:1px solid #444;padding:12px 16px;flex:1;background:#fff}
+.kpi b{display:block;font-size:24px}
+</style>
+</head>
+<body>
+<div class="frame fm">
+<div class="wl">W-03 Referans davet et (mobil)</div>
+<div class="bar"><div class="logo"><span class="ic x"></span>Köprü</div><div class="row"><span class="ic x"></span></div></div>
+<div class="pad padb">
+<h2>Referans davet et</h2>
+<div class="box gray">
+<div class="between small"><b>Onaylı referans: 2 / 3</b><span>Davet: 4 / 5</span></div>
+<div class="prog"><span style="width:66%"></span></div>
+<div class="muted">Pilot kural: 5 davetten en az 3'ü onaylanınca talep oluşturma açılır.</div>
+</div>
+<div class="lbl">Telefon veya e-posta</div>
+<div class="in">+90 5xx xxx xx xx veya ornek@ornek.com</div>
+<div class="lbl">Yakınlık</div>
+<div><span class="chip">aile</span><span class="chip on">arkadaş</span><span class="chip">sınıf arkadaşı</span><span class="chip">iş arkadaşı</span><span class="chip">diğer</span></div>
+<div class="note"><b>Not:</b> Davet ettiğin kişi hakkında başka bilgi girmezsin. Şirket, sektör ve pozisyonunu kendisi girer.</div>
+<div class="btn">Davet gönder</div>
+<div class="hr"></div>
+<div class="between"><h2 style="margin:0">Gönderilen davetler</h2><span class="muted">4</span></div>
+<div class="warn">Onaylanmayan davetler 14 gün içinde onaylanmazsa silinir. Kişinin iletişim bilgisi de silinir.</div>
+<div class="it"><div class="between"><b class="small">+90 532 *** ** 17</b><span class="st k">Onaylandı</span></div><div class="muted">arkadaş · 03.11.2026</div></div>
+<div class="it"><div class="between"><b class="small">m***@ornek.com</b><span class="st k">Onaylandı</span></div><div class="muted">iş arkadaşı · 05.11.2026</div></div>
+<div class="it"><div class="between"><b class="small">+90 505 *** ** 42</b><span class="st">Bekliyor</span></div><div class="muted">sınıf arkadaşı · 9 gün kaldı, sonra silinir</div>
+<div class="row" style="margin-top:6px"><span class="btn g sm">Hatırlat</span><span class="btn g sm">Geri çek</span></div></div>
+<div class="it"><div class="between"><b class="small">e***@ornek.com</b><span class="st">Bekliyor</span></div><div class="muted">aile · 2 gün kaldı, sonra silinir</div>
+<div class="row" style="margin-top:6px"><span class="btn g sm">Hatırlat</span><span class="btn g sm">Geri çek</span></div></div>
+<div class="it"><div class="between"><b class="small" style="color:#999">(silindi)</b><span class="st d">Süresi doldu</span></div><div class="muted">diğer · 14 gün içinde onaylanmadı</div></div>
+</div><div class="tabbar"><div class=""><i></i>Ana sayfa</div><div class="on"><i></i>Ağım</div><div class=""><i></i>Talepler</div><div class=""><i></i>Hesabım</div></div>
+</div>
+<script>document.body.setAttribute('data-h', Math.ceil(document.querySelector('.frame').getBoundingClientRect().height));</script>
+</body>
+</html>
