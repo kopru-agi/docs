@@ -7,9 +7,7 @@
 
 | Rol | Kişi | Sorumluluk |
 |---|---|---|
-| Danışman | Ulaş Vural Hoca | Yönlendirme, analiz ve tasarım onayı |
-| Proje sahibi ve hosting desteği | Bahadır Gülümser Hoca | Proje fikri, hosting giderleri |
-| Proje koordinatörü / maintainer | Iliya Dindar | GitHub organizasyonu, süreç kuralları, PR incelemesi, issue triyajı, hocalarla iletişim |
+| Proje koordinatörü / maintainer | Iliya Dindar | GitHub organizasyonu, süreç kuralları, PR incelemesi, issue triyajı, hocamızla iletişim |
 | Analiz ve dokümantasyon sorumlusu | Gönüllü bekleniyor | Gereksinim ve use case dokümanlarının güncel tutulması |
 | UI/UX sorumlusu | Gönüllü bekleniyor | Wireframe → yüksek çözünürlüklü tasarım, kullanılabilirlik testi |
 | Veritabanı sorumlusu | Gönüllü bekleniyor | ER modeli, referans ağı tabloları, migration'lar |

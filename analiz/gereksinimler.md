@@ -1,6 +1,6 @@
 # Gereksinim Analizi (v1.0)
 
-> Şablon: ISO/IEC/IEEE 29148 (hafif). Tarih: 28.11.2026. Durum: **hocalarımızın onayına sunuldu**.
+> Şablon: ISO/IEC/IEEE 29148 (hafif). Tarih: 28.11.2026. Durum: **hocamızın onayına sunuldu**.
 > Kaynaklar: WhatsApp grubundaki hoca yönlendirmeleri, ekip anketleri, [araştırma notları](../arastirma/).
 
 ## 1. Amaç
@@ -103,7 +103,7 @@ Kapsam kararı ekip anketiyle alındı (10 oy, 0 karşı): "V1 sadece referansla
 - Ekip gönüllü öğrencilerden oluşur; deneyim düzeyleri farklıdır.
 - Türkiye'de SMS başlığı için kurum veya şirket kaydı gerekir. Bu yüzden SMS doğrulama v1'de yoktur.
 
-## 8. Hocalarımıza açık sorular
+## 8. Hocamıza açık sorular
 
 1. **Veri sorumlusu** kim olacak: hocamız, üniversite veya bir dernek? (Öğrenci grubunun tüzel kişiliği yok.)
 2. **SMS hesabı** üniversite veya bir kurum üzerinden açılabilir mi?

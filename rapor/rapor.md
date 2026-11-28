@@ -4,10 +4,8 @@
 <div class="kapak-alt">Referansla iş bulmayı kolaylaştıran, gönüllülük esaslı bir dayanışma ağı</div>
 <table class="kapak-tablo">
 <tr><td>Tarih</td><td>28 Kasım 2026</td></tr>
-<tr><td>Danışman</td><td>Ulaş Vural Hoca</td></tr>
-<tr><td>Proje sahibi</td><td>Bahadır Gülümser Hoca</td></tr>
-<tr><td>Koordinatör</td><td>Iliya Dindar</td></tr>
-<tr><td>Kaynak</td><td>github.com/kopru-agi/docs</td></tr>
+<tr><td>Hazırlayan</td><td>Iliya Dindar</td></tr>
+<tr><td>GitHub</td><td>github.com/iliyadindar</td></tr>
 </table>
 <div class="kapak-not">"Köprü" çalışma adıdır; kalıcı ad ekip oylamasıyla belirlenecektir.</div>
 </div>

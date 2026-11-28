@@ -37,7 +37,7 @@
 
 | # | Tarih | Kilometre taşı |
 |---|---|---|
-| K1 | 6 Ara 2026 | Analiz ve tasarım hocalarımızca onaylandı |
+| K1 | 6 Ara 2026 | Analiz ve tasarım hocamızca onaylandı |
 | K2 | 20 Ara 2026 | Veri modeli, KVKK metinleri ve altyapı hazır |
 | K3 | 3 Oca 2027 | Sprint 1 demosu: davet → rıza → aktif referans |
 | K4 | 17 Oca 2027 | Sprint 2 demosu: talep → eşleştirme → bildirim |
